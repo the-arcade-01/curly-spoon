@@ -11,6 +11,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name = 'home'),
     path('accounts/',include(('accounts.urls','accounts'), namespace = 'accounts')),
+    path('host/',include('AdminApp.urls','AdminApp'), namespace = 'adminapp'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
